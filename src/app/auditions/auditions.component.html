@@ -1,0 +1,99 @@
+<div class="container">
+
+  <div class="sidebar">
+    <div class="sidebar-option body-text" (click)="scrollToSection('overview')">Overview</div>
+    <div class="sidebar-option body-text" (click)="scrollToSection('audition-information')">Audition Information</div>
+    <div class="sidebar-option body-text" (click)="scrollToSection('faq')">FAQ</div>
+    <button class="apply-now-button body-text">Apply Now</button>
+  </div>
+
+  <div class="content-block themetoggle-block">
+    <div class="tabs">
+      <div class="tab-option body-text" (click)="scrollToSection('overview')">Overview</div>
+      <div class="tab-option body-text" (click)="scrollToSection('audition-information')">Audition Information</div>
+      <div class="tab-option body-text" (click)="scrollToSection('faq')">FAQ</div>
+      <!-- <div class="tab-option body-text">Apply Now</div> -->
+    </div>
+  </div>
+  
+  
+
+  <div class="main-section">
+    <h1 class="headline-1 " id="overview">The Tritones Experience</h1>
+    <h2 class="subheadline-1">A Fun, Vibrant Family at UCSD</h2>
+    <img src="assets/images/Auditions/1.png" alt="audition 1" class="main-section-image">
+    <p class="body-text">
+      Singing with the Tritones is a transformative experience that will create lasting memories and plenty of opportunities for personal growth. As a competitive music group, the Tritones maintain an extensive schedule of concerts, gigs, and media appearances within and beyond UC San Diego. At the same time, we always make sure to set aside time for group bonding, retreats, and inter-a cappella group social events. In essence, the Tritones is a home away from home for our group members.
+    </p>
+    <h2 class="subheadline-1">Performance and Innovation</h2>
+    <img src="assets/images/Auditions/2.png" alt="audition 2" class="main-section-image">
+    <p class="body-text">
+      We perform regularly throughout the school year and travel all over California to perform, compete, and showcase our alma mater, UC San Diego! Besides putting on quarterly shows on campus, our group performs at schools, offices, country clubs, radio, celebrity show openers, and even on TV! As a member of Tritones, there’s always an exciting performance to look forward to, whether it be an on campus gig or on air!
+    </p>
+    <h2 class="subheadline-1">The Bottom Line: Group Commitment</h2>
+    <img src="assets/images/Auditions/3.jpeg" alt="audition 2" class="main-section-image">
+    <p class="body-text">
+      As much as we love to have fun, the Tritones are a group that works hard. We hold an extremely high regard for rehearsal attendance and decorum. The group rehearses weekly, and extra rehearsals may be scheduled before important performances. Additionally, all members share fundraising and administrative responsibilities. Though there is a significant time commitment, schedules of all members are considered in order to ensure a balanced college experience.
+    </p>
+    <h1 class="headline-1" id="audition-information">Audition Information</h1>
+    <p class="body-text">
+      We understand that you may be intimidated by the a cappella audition process here at UC San Diego. We want to assure you that a cappella auditions are not a “test”. The process is simply a tool for all the groups to get to know you as a person while becoming familiar with your voice. We also encourage you to audition for every group that you can possibly audition for; this way, you can determine which group is the best fit for you!
+    </p>
+    <p class="body-text">
+      Audition dates for the UCSD Tritones start on Thursday September 22nd, and end on Thursday September 29th — a week-long process!
+    </p>
+    <p class="body-text">
+      During the “audition” portion, you will be able to showcase your solo voice and introduce yourself as an individual. The audition will include:
+    </p>
+    <ul>
+      <li class="body-text">some warm-ups/a range test,</li>
+      <li class="body-text">rhythm reading and sight reading,</li>
+      <li class="body-text">some tonal memory exercises,</li>
+      <li class="body-text">a 60 second solo of your style and choice.</li>
+      <li class="body-text">and an optional vocal percussion solo.</li>
+      <li class="body-text">* Please prepare a one-minute solo of your choice that showcases your vocal abilities, and also prepare to sing the Star Spangled Banner (U.S. National Anthem) in case we want to hear more.</li>
+    </ul>
+    <p class="caption-text">
+      *We are always looking for talented beatboxers or those motivated to learn the skill!
+    </p>
+    <p class="caption-text">
+      If you require accommodations, such as a remote audition, need to cancel/reschedule, or if you have any general questions, shoot us an email or an Instagram DM!
+    </p>
+    <div class="buttons"><button class="button"><p class="body-text">Apply now</p></button></div>
+    
+    
+
+    <div class="heading">
+      <h1 class="headline-1">FAQ</h1>
+    </div>
+    
+    <div class="faq-container">
+    
+      <div class="faq-item" id="faq" *ngFor="let item of faqData">
+        <div class="faq-question">
+          <h2 class="headline-2">{{ item.question }}</h2>
+          <div class="toggle-icon" (click)="toggleAnswer(item)">
+            <ng-container *ngIf="!item.expanded; else expandedIcon">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="#E1D8B0" xmlns="http://www.w3.org/2000/svg">
+                <path id="Vector" d="M13.5 22.5H16.5V16.5H22.5V13.5H16.5V7.5H13.5V13.5H7.5V16.5H13.5V22.5ZM15 30C12.925 30 10.975 29.6063 9.15 28.8188C7.325 28.0313 5.7375 26.9625 4.3875 25.6125C3.0375 24.2625 1.96875 22.675 1.18125 20.85C0.39375 19.025 0 17.075 0 15C0 12.925 0.39375 10.975 1.18125 9.15C1.96875 7.325 3.0375 5.7375 4.3875 4.3875C5.7375 3.0375 7.325 1.96875 9.15 1.18125C10.975 0.39375 12.925 0 15 0C17.075 0 19.025 0.39375 20.85 1.18125C22.675 1.96875 24.2625 3.0375 25.6125 4.3875C26.9625 5.7375 28.0313 7.325 28.8188 9.15C29.6063 10.975 30 12.925 30 15C30 17.075 29.6063 19.025 28.8188 20.85C28.0313 22.675 26.9625 24.2625 25.6125 25.6125C24.2625 26.9625 22.675 28.0313 20.85 28.8188C19.025 29.6063 17.075 30 15 30ZM15 27C18.35 27 21.1875 25.8375 23.5125 23.5125C25.8375 21.1875 27 18.35 27 15C27 11.65 25.8375 8.8125 23.5125 6.4875C21.1875 4.1625 18.35 3 15 3C11.65 3 8.8125 4.1625 6.4875 6.4875C4.1625 8.8125 3 11.65 3 15C3 18.35 4.1625 21.1875 6.4875 23.5125C8.8125 25.8375 11.65 27 15 27Z" fill="#E1D8B0"/>
+              </svg>
+            </ng-container>
+            <ng-template #expandedIcon>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <path d="M7.5 16.5H22.5V13.5H7.5V16.5ZM15 30C12.925 30 10.975 29.6063 9.15 28.8188C7.325 28.0313 5.7375 26.9625 4.3875 25.6125C3.0375 24.2625 1.96875 22.675 1.18125 20.85C0.39375 19.025 0 17.075 0 15C0 12.925 0.39375 10.975 1.18125 9.15C1.96875 7.325 3.0375 5.7375 4.3875 4.3875C5.7375 3.0375 7.325 1.96875 9.15 1.18125C10.975 0.39375 12.925 0 15 0C17.075 0 19.025 0.39375 20.85 1.18125C22.675 1.96875 24.2625 3.0375 25.6125 4.3875C26.9625 5.7375 28.0313 7.325 28.8188 9.15C29.6063 10.975 30 12.925 30 15C30 17.075 29.6063 19.025 28.8188 20.85C28.0313 22.675 26.9625 24.2625 25.6125 25.6125C24.2625 26.9625 22.675 28.0313 20.85 28.8188C19.025 29.6063 17.075 30 15 30ZM15 27C18.35 27 21.1875 25.8375 23.5125 23.5125C25.8375 21.1875 27 18.35 27 15C27 11.65 25.8375 8.8125 23.5125 6.4875C21.1875 4.1625 18.35 3 15 3C11.65 3 8.8125 4.1625 6.4875 6.4875C4.1625 8.8125 3 11.65 3 15C3 18.35 4.1625 21.1875 6.4875 23.5125C8.8125 25.8375 11.65 27 15 27Z" fill="#E1D8B0"/>
+              </svg>
+            </ng-template>
+          </div>
+        </div>
+        <div class="faq-answer body-text" [ngClass]="{ 'hidden': !item.expanded }" [ngClass]="{ 'visible': item.expanded }">
+          {{ item.answer }}
+        </div>
+      </div>
+    
+    </div>
+    
+    <!-- <h1 class="headline-1" id="faq">FAQ</h1> -->
+  </div>
+
+
+</div>

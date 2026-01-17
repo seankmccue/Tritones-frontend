@@ -1,0 +1,132 @@
+<div class="container">
+  <header class="themetoggle-block">
+    <a routerLink="/">
+      <img [src]="logoSrc" alt="Tritone Logo" class="logo" />
+    </a>
+    <div
+      class="burger-menu material-symbols-outlined"
+      (click)="toggleMobileNav()"
+    >
+      ☰
+    </div>
+    <div class="nav-container">
+      <nav class="nav-desktop">
+        <a routerLink="/" class="body-text">Home</a>
+        <a routerLink="/about-us" class="body-text">Members</a>
+        <a routerLink="/auditions" class="body-text">Auditions</a>
+        <a routerLink="/photos" class="body-text">Photos</a>
+        <a routerLink="/bookings" class="body-text">Bookings</a>
+        <!-- <a routerLink="/contact-us" class="body-text">Contact Us</a> -->
+      </nav>
+
+      <nav class="nav-mobile themetoggle-block" [class.open]="isMobileNavOpen">
+        <a routerLink="/" class="body-text" (click)="closeMobileNav()">Home</a>
+        <a
+          routerLink="/about-us"
+          class="body body-text"
+          (click)="closeMobileNav()"
+          >About Us</a
+        >
+        <a
+          routerLink="/auditions"
+          class="body body-text"
+          (click)="closeMobileNav()"
+          >Auditions</a
+        >
+        <a routerLink="/photos" class="body-text" (click)="closeMobileNav()"
+          >Photos</a
+        >
+        <a routerLink="/bookings" class="body-text" (click)="closeMobileNav()"
+          >Bookings</a
+        >
+        <!-- <a routerLink="/contact-us" class="body-text" (click)="closeMobileNav()">Contact Us</a> -->
+      </nav>
+
+      <!-- <app-theme-toggle></app-theme-toggle> -->
+    </div>
+  </header>
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="footer">
+  <div class="footer-column">
+    <h1 class="headline-2">The Tritones</h1>
+    <p class="body-text">
+      UC San Diego's premier co-ed<br />a capella group - est. 1996.
+    </p>
+    <div class="footer-column tablet">
+      <a class="body-text" href="mailto:tritones@ucsd.edu">tritones@ucsd.edu</a>
+      <div class="social-icons">
+        <a
+          href="https://open.spotify.com/artist/1eohVzWa5vbk54pmWcFQar"
+          target="_blank"
+          ><img
+            src="assets/images/social-logo/spotifylogo.svg"
+            alt="spotifylogo"
+            class="socialLogo"
+        /></a>
+        <a href="https://www.facebook.com/UCSDTritones/" target="_blank"
+          ><img
+            src="/assets/images/social-logo/facebooklogo.svg"
+            alt="facebooklogo"
+            class="socialLogo"
+        /></a>
+        <a href="https://www.instagram.com/ucsd.tritones/" target="_blank"
+          ><img
+            src="assets/images/social-logo/instagramlogo.svg"
+            alt="instagramlogo"
+            class="socialLogo"
+        /></a>
+        <a href="https://www.youtube.com/@ucsdtritones" target="_blank"
+          ><img
+            src="assets/images/social-logo/youtubelogo.svg"
+            alt="youtubelogo"
+            class="socialLogo"
+        /></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-column desktop">
+    <p class="subheadline-1 soft-yellow">Connect with Us</p>
+    <a class="body-text" href="mailto:tritones@ucsd.edu">tritones@ucsd.edu</a>
+    <div class="social-icons">
+      <a
+        href="https://open.spotify.com/artist/1eohVzWa5vbk54pmWcFQar"
+        target="_blank"
+        ><img
+          src="assets/images/social-logo/spotifylogo.svg"
+          alt="spotifylogo"
+          class="socialLogo"
+      /></a>
+      <a href="https://www.facebook.com/UCSDTritones/" target="_blank"
+        ><img
+          src="assets/images/social-logo/facebooklogo.svg"
+          alt="facebooklogo"
+          class="socialLogo"
+      /></a>
+      <a href="https://www.instagram.com/ucsd.tritones/" target="_blank"
+        ><img
+          src="assets/images/social-logo/instagramlogo.svg"
+          alt="instagramlogo"
+          class="socialLogo"
+      /></a>
+      <a href="https://www.youtube.com/@ucsdtritones" target="_blank"
+        ><img
+          src="assets/images/social-logo/youtubelogo.svg"
+          alt="youtubelogo"
+          class="socialLogo"
+      /></a>
+    </div>
+  </div>
+
+  <div class="footer-column">
+    <p class="subheadline-1 soft-yellow">Our Events</p>
+    <p routerLink="/bookings" class="footer-nav body-text">Bookings</p>
+    <p routerLink="/photos" class="footer-nav body-text">Photos</p>
+  </div>
+  <div class="footer-column">
+    <p class="subheadline-1 soft-yellow">Get Involved</p>
+    <p routerLink="/about-us" class="footer-nav body-text">About Us</p>
+    <p routerLink="/auditions" class="footer-nav body-text">Auditions</p>
+  </div>
+</footer>

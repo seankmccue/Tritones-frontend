@@ -1,0 +1,218 @@
+header {
+  height: 80px;
+  /* width: auto; */
+  display: flex;
+  justify-content:space-between; 
+  align-items: center;
+  position: sticky;
+  top: 0;
+  /* width: fit-content; */
+  z-index: 2000; /* This ensures the header stays above other content */
+  padding: 0px 50px;
+}
+
+.logo {
+  width: 145px;
+  height: 45px;
+}
+
+.nav-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px; /* Adjust as necessary to create space between nav and toggle button */
+}
+
+.burger-menu {
+  display: none; /* Hide by default */
+  cursor: pointer;
+  /* width: 17.91px;
+  height: 12.21px; */
+  margin-left: auto; /* Push the icon to the right */
+  margin-right: 10px;
+  font-size: 2.5rem;
+}
+
+
+.nav-mobile {
+  /* color: var(--text-color-dark); */
+  display: none; /* Hide by default */
+  flex-direction: column;
+  position: fixed; /* Use fixed to position it relative to the viewport */
+  top: 80px; /* Adjust based on the height of your header */
+  left: 0; /* Start from the left edge of the viewport */
+  width: 100%; /* Make it span the entire width */
+  padding: 1rem;
+  border-radius: 0; /* Adjust as necessary */
+  z-index: 1000; /* Use a high z-index to ensure it appears above other elements */
+}
+
+.nav-mobile.open {
+  display: flex; /* Show when the open class is applied */
+}
+
+
+.nav-mobile a {
+  padding: 0.5rem 0; /* Adjust as necessary */
+  text-decoration: none;
+  color: #000; /* Adjust as necessary */
+}
+
+nav {
+  display: flex;
+  gap: 20px; /* Adjust as necessary to create space between links */
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--text-color-dark);
+}
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none; /* Hide desktop nav in tablet view */
+  }
+
+  .burger-menu {
+    display: block; /* Show burger menu icon in tablet view */
+    float: none;
+  }
+
+  .nav-container {
+    width: 0%;
+    height: 0%;
+  }
+}
+
+@media (max-width: 1164px) {
+  .nav-desktop {
+    gap: 0rem;
+  }
+
+  .nav-desktop .body-text {
+    font-size: 20px;
+  }
+
+  .nav-container {
+    flex: 0 0 auto;
+  }
+}
+
+nav a:hover,.footer-nav:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+app-theme-toggle {
+  font-size: 24px; /* Set to your body text size */
+}
+
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5rem 2rem 5rem;
+  gap: 1rem;
+  background-color: var(--background-color-gray);
+}
+
+.footer-column:first-child{
+  flex: 1;
+  margin-right: 50px;
+}
+
+.footer-column:first-child {
+  flex: initial; /* Resetting flex property for the first column */
+  margin-right: 0; /* Removing the right margin for the first column */
+}
+
+/* Right-aligning content in other columns */
+.footer-column:not(:first-child) {
+  text-align: left;
+  align-items: flex-end;
+}
+
+.tablet{
+  display: none; /* Hide it in desktop view */
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 1rem;
+  gap: 1.5rem; /* Adjust the gap between the icons */
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 3rem 2rem 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* .footer-column{
+    
+  } */
+  .tablet{
+    display:block;
+  }
+  .desktop{
+    display: none;
+  }
+  .footer-column h1 {
+    font-size: 32px;
+  }
+  
+  .footer-column .subheadline-1, 
+  .footer-column .body-text {
+    margin-left: auto;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .footer {
+    flex-direction: column; /* Stack the columns vertically */
+  }
+
+  .footer-column {
+    display: none; /* Hide all footer columns by default */
+  }
+
+  .footer-column:first-of-type {
+    display: block; /* Only display the first footer column */
+  }
+
+  .footer-column .subheadline-1, 
+  .footer-column .body-text {
+    font-size: 14px; /* Adjust the font size for mobile view */
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer-column:first-of-type {
+    margin-right: 20rem;
+  }
+}
+
+
+/* .nav-desktop{
+  color: var(--text-color-dark);
+} */
+
+.nav-mobile{
+  align-items: center;
+}
+
+.nav-mobile .body-text{
+  color: var(--text-color-dark);
+}
+
+.soft-yellow {
+  color: var(--background-soft-yellow);
+}

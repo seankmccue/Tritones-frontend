@@ -1,0 +1,114 @@
+<!-- <section class="intro">
+  <div class="photo-container">
+    <img src="assets/images/home-page/home-Intro.png" alt="Tritone Photo" class="photo">
+  </div>
+  <div class="background-img" id="intro-image">
+    <div class="text-content">
+      <h1 class="headline-1">UCSD's premiere vocal<br>ensemble</h1>
+      <h3 class="subheadline-1">Diverse people, majors, &<br>interests-united by a<br>common passion for music.</h3>
+      <button pButton type="button" class="subheadline-1 join-button" routerLink="/auditions">
+      Join us
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="our-music">
+  <div class="content-block">
+    <h2 class="subheadline-1">Our music</h2>
+      <div class="album-grid">
+        <div *ngFor="let track of tracks" class="album-card">
+          <img [src]="track.image_url" alt="{{ track.name }} album cover" class="album-cover">
+          <div class="album-details">
+            <p class="album-title">{{ track.name }}</p>
+            <p class="album-year">{{ track.release_year }}</p>
+          </div>
+        </div>
+    </div>
+
+    <button pButton type="button" class="discover-button body-text">
+      Discover more
+    </button>
+  </div>
+</section>
+
+
+<section class="transition">
+  <div class="text-content">
+    <h1 class="headline-1">We love to perform- <br> no matter the occasion</h1>
+    <p class="body-text">Whether it’s performing on TV, entertaining for community events, or getting dressed up for your formal occasion, we bring award-winning performances wherever we go.</p>
+    <button pButton type="button" class="transition-button body-text" routerLink="/bookings" >Book now</button>
+  </div>
+  <img src="assets/images/home-page/transition.png" alt="Image description" class="transition-image">
+</section>
+
+
+<section class="end">
+  <div class="end-content">
+    <h1 class="headline-1">We’re always on the lookout for talented,<br> fun-loving voices and personalities!</h1>
+    <p class="body-text">Our members come from all walks of campus life and<br> represent a diverse community of UC San Diego.<br> We encourage everyone with a passion for singing to<br> audition— regardless of your formal vocal background.</p>
+    <button pButton type="button" class="end-button body"routerLink="/auditions">Become a Tritone!</button>
+  </div>
+</section> -->
+
+
+<div class="main-content flex-column">
+  <section class="intro flex-column no-flex">
+    <div class="background-img box-shadow no-shadow" id="intro-image">
+      <img src="../../assets/images/home-page/home-Intro.png" alt="" id="intro-img-desktop">
+    </div>
+    <div class="text-content flex-column" id="premier-container" *ngIf="isDesktopWidthValid()">
+      <h1 class="headline-1" id="premier">UCSD's premier vocal ensemble</h1>
+      <h3 class="subheadline-1" id="diverse">Diverse people, majors, & interests-united by a common passion for music.</h3>
+      <button pButton type="button" class="subheadline-1 btn btn-primary" id="join" routerLink="/auditions">
+        <p>Join us</p>
+      </button>
+    </div>
+    <div class="text-content flex-column" id="premier-container" *ngIf="!isDesktopWidthValid()">
+      <h1 class="headline-1" id="premier">UCSD's premier vocal ensemble</h1> 
+      <h3 class="subheadline-1" id="diverse">Diverse people, majors, & interests-united by a common passion for music.</h3>
+      <button pButton type="button" class="subheadline-1 btn btn-primary" id="join" routerLink="/auditions">
+        <p>Join us</p>
+      </button>
+    </div>
+  </section>
+  <section class="our-music desktop-width">
+    <div class="flex-column content-block" id="music-content">
+      <h2 class="subheadline-2" id="music-heading">Our music</h2>
+      <div class="album-grid">
+        <div *ngFor="let track of tracks" class="album-card">
+          <a [href]="track.spotify_url" target="_blank">
+            <img [src]="track.image_url" alt="{{ track.name }} album cover" class="album-cover">
+          </a>
+          <p class="album-title">{{ track.name }}</p>
+          <p class="album-year">{{ track.release_year }}</p>
+        </div>
+      </div>
+      <!-- <button pButton type="button" class="btn-transparent" id="discover">
+        <a href="https://open.spotify.com/artist/1eohVzWa5vbk54pmWcFQar" target="_blank">Discover more</a>
+      </button> -->
+      <a href="https://open.spotify.com/artist/1eohVzWa5vbk54pmWcFQar" target="_blank" class="btn-transparent" id="discover">
+        Discover more
+      </a>
+    </div>
+  </section>
+  <section class="transition flex-column desktop-width" id="transition-row">
+    <div class="background-img no-shadow" id="transition-image">
+      <img src="../../assets/images/home-page/transition.png" alt="">
+    </div>
+    <div class="text-content flex-column home-shadow" id="transition-flex">
+      <h1 class="headline-1" id="perform">We love to perform- <br> no matter the occasion</h1>
+      <p class="caption-text body-text">Whether it’s performing on TV, entertaining for community events, or getting dressed up for your formal occasion, we bring award-winning performances wherever we go.</p>
+      <button pButton type="button" class="btn btn-primary" id="book" routerLink="/bookings" ><p>Book now</p></button>
+    </div>
+  </section>
+  <section class="end">
+    <div class="end-content flex-column" id="end-flex">
+      <h1 class="subheadline-2" id="recruit-heading">We’re always on the lookout for talented, fun-loving voices and personalities!</h1>
+      <p class="body-text">Our members come from all walks of campus life and represent a diverse community of UC San Diego. We encourage everyone with a passion for singing to audition— regardless of your formal vocal background.</p>
+      <button pButton type="button" class="btn btn-transparent" id="btn-end" routerLink="/auditions"><span>Become a Tritone!</span></button>
+    </div>
+  </section>
+</div>

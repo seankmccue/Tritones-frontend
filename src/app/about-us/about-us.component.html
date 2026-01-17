@@ -1,0 +1,92 @@
+<div class="top-navigation" #topButtonGroup>
+  <div class="button-group" >
+    <button (click)="scrollToSection('sopranos')" class="nav-button sopranos"><p class="body-text">Sopranos</p></button>
+    <button (click)="scrollToSection('mezzos')" class="nav-button mezzos"><p class="body-text">Mezzos</p></button>
+    <button (click)="scrollToSection('altos')" class="nav-button altos"><p class="body-text">Altos</p></button>
+    <button (click)="scrollToSection('tenors')" class="nav-button tenors"><p class="body-text">Tenors</p></button>
+    <button (click)="scrollToSection('baritones')" class="nav-button baritones"><p class="body-text">Baritones & Bass</p></button>
+    <!-- <button (click)="scrollToSection('bass')" class="nav-button bass"><p class="body-text">Bass</p></button> -->
+  </div>
+</div>
+
+<div class="content-block">
+    <h1 class="headline-1">Our Voices</h1>
+    <!-- <div class="desktop"> -->
+    
+        <p class = "paragraph-1 body-text">
+        The Tritones represent a diverse microcosm of the UCSD student body: some bringing years of vocal training to the group, others guided solely by raw talent.<br>Meet them below.
+        </p>
+    <!-- </div> -->
+    <!-- <div class = "tablet">
+        <p class = "body-text">
+            The Tritones represent a diverse microcosm of the UCSD<br> student body: some bringing years of vocal training to the<br> group, others guided solely by raw talent. Meet them below.
+        </p>
+    </div>
+    <div class = "mobile">
+        <p class = "body-text">
+            The Tritones represent a diverse microcosm of the UCSD student<br> body: some bringing years of vocal<br> training to the group, others guided<br> solely by raw talent.<br> Meet them below.
+        </p>
+    </div> -->
+</div>
+  
+<div class="navigation-section">
+    <h2 class="title headline-2">2023-2024 Tritones</h2>
+    <div class="button-group" #navButtonGroup>
+        <button (click)="scrollToSection('sopranos')" class="nav-button sopranos"><p class="body-text">Sopranos</p></button>
+        <button (click)="scrollToSection('mezzos')" class="nav-button mezzos"><p class="body-text">Mezzos</p></button>
+        <button (click)="scrollToSection('altos')" class="nav-button altos"><p class="body-text">Altos</p></button>
+        <button (click)="scrollToSection('tenors')" class="nav-button tenors"><p class="body-text">Tenors</p></button>
+        <button (click)="scrollToSection('baritones')" class="nav-button baritones"><p class="body-text">Baritones & Bass</p></button>
+        <!-- <button (click)="scrollToSection('bass')" class="nav-button bass"><p class="body-text">Bass</p></button> -->
+    </div>
+</div>
+
+<div class="display-member" *ngFor="let voicePartKey of voicePartKeys">
+  <div [id]="voicePartKey" class="voice-part">
+    <div class="voice-part-title body-text">{{ getDisplayName(voicePartKey) | titlecase }}</div>
+    <div class="member-list">
+      <div *ngFor="let member of voicePartGroups[voicePartKey]" class="member-card"
+      (mouseover)="selectMember(member)"
+      (mouseleave)="deselectMember()"
+      [ngClass]="{'hovered': selectedMember === member}">
+        <div class="member-photo" [style.backgroundImage]="'url(' + member.imageUrl + ')'">
+          <div class="overlap-group">
+
+            <div *ngIf="selectedMember !== member"class="flexcontainer">
+                <div class="text-1">
+                  {{ member.name }}<br>
+                  <p class="text-2">
+                    {{ member.board ? member.board : ''}}<br>
+                    {{ member.voicePart }}, {{ member.number }}
+                  </p>
+                </div>
+                <!-- <p class="text-2">
+                  {{ member.board ? member.board + ', ' : ''}}{{ member.voicePart }}, {{ member.number }},
+                </p> -->
+            </div>
+
+            <div *ngIf="selectedMember === member" class="selectedFlexContainer">
+                  <div class="text-3">
+                    {{ member.classLevel }}<br>
+                  </div>
+                  <p class="text-4">
+                    {{ member.major }}<br>
+                    {{ member.hometown }}<br>
+                    {{ member.funFacts }}
+                  </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+  
+  
+
+  
+
+  

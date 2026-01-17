@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Syne:wght@400;600&display=swap');
+:root {
+  --background-color-dark: #1D1514;
+  --background-color-light: #F2EFE9;
+  --text-color-dark: #F2EFE9; /* Adjust as necessary */
+  --text-color-light: #1D1514; /* Adjust as necessary */
+  --desktop-min-width: 769px;
+  --tablet-min-width: 481px;
+  --tablet-max-width: 768px;
+}
+
+body {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+
+.headline-1 {
+  font-family: 'Franuces', serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 56px;
+}
+
+.headline-2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 400; /* Regular */
+  font-size: 40px;
+}
+
+.subheadline-1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 32px;
+}
+
+.subheadline-2 {
+  font-family: 'Fraunces', serif; /* Assuming Franuces was a typo */
+  font-weight: 400; /* Regular */
+  font-size: 24px;
+}
+
+.body-text {
+  font-family: 'Syne', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 24px;
+}
+
+.caption-text {
+  font-family: 'Syne', sans-serif;
+  font-weight: 400; /* Regular */
+  font-size: 16px;
+}
+
+.main-section {
+  width: 75%; /* Takes up the remaining 75% of the page width */
+  padding: 20px; /* Adds some padding inside the main section */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.main-section .headline-1 {
+  margin-bottom: 10px; /* Adds some space below the headline */
+}
+
+.main-section .subheadline-1 {
+  margin-bottom: 20px; /* Adds some space below the subheadline */
+}
+
+.main-section-image {
+  width: 100%; /* Makes the image take up the entire width of the main section */
+  height: auto; /* Maintains the original aspect ratio of the image */
+  margin-bottom: 20px; /* Adds some space below the image */
+}
+
+.body-text {
+  /* Your existing styles for body text */
+}
