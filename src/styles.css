@@ -23,6 +23,9 @@ body {
   color: var(--text-color-dark);
   transition: background-color 0.3s, color 0.3s;
   /* width: 100vw; */
+  overflow-x: clip;
+  margin: 0;
+  padding: 0;
 }
 
 body.dark {

@@ -82,7 +82,7 @@
   }
 }
   
-.description{
+.description {
 
 }
 
@@ -104,16 +104,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  #featured-with {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 .thread-quotes-container {
   display: flex;
   justify-content: center;
-  margin-left: 5%;
-  margin-right: 5%;
+  align-content: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
   /* overflow-x: scroll; comment back in once there's more than one quote */
   gap: 50px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .quote-container {
@@ -128,7 +134,7 @@
   box-sizing: border-box; /* This ensures that padding is included in the element's total width and height */
   text-align: center;
   /*  */
-  margin: auto;
+  /* margin: 0 auto; */
 }
 
 
@@ -252,6 +258,10 @@
   width: 547.284px;
 }
 
+.booking-container {
+  margin-bottom: 3rem;
+}
+
 .form-group {
   text-align: left;
   width: 100%;
@@ -288,15 +298,18 @@ label {
 }
 
 .btn-primary {
-  display: inline-flex;
-  align-self: center;
-  padding: 19.931px 50.659px;
-  justify-content: center;
+  /* display: inline-flex; */
+  /* align-self: center; */
+  display:block;
+  margin: 0 auto;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  padding: 1.3rem 4rem 1.3rem 4rem;
+  /* justify-content: center; */
   border-radius: 16.61px;
   border: 0.83px solid #F9F6EF;
   color: #F9F6EF;
   cursor: pointer;
-  width: 160px;
 
   color: #F9F6EF;
   background: #40667D;
@@ -308,14 +321,13 @@ label {
 }
 
 .btn-primary:hover {
-  background: #222227;
-  border: 0.83px solid #222227;
+  background: #164561;
 }
 
 .btn-scroll {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 4rem;
+  right: 4rem;
   z-index: 999;
   width: 119px;
   height: 117px;
@@ -359,6 +371,9 @@ label {
   }
   .headline-2{
     font-size: 40px;
+  }
+  .quote-container {
+    width: 80%;
   }
 }
 
