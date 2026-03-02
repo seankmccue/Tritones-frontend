@@ -58,18 +58,16 @@
   <section class="intro flex-column no-flex">
     <div class="background-img box-shadow no-shadow" id="intro-image">
       <img src="../../assets/images/home-page/home-Intro.png" alt="" id="intro-img-desktop">
-      <div *ngIf="isDesktopWidthValid()" class="desktop-width" id="intro-desktop">
-        <div class="text-content flex-column" id="premier-container">
-          <h1 class="headline-1" id="premier">UCSD's premier vocal ensemble</h1>
-          <h3 class="subheadline-1" id="diverse">Diverse people, majors, & interests-united by a common passion for music.</h3>
-          <button pButton type="button" class="subheadline-1 btn btn-primary" id="join" routerLink="/auditions">
-            <p>Join us</p>
-          </button>
-        </div>
-      </div>
+    </div>
+    <div class="text-content flex-column" id="premier-container" *ngIf="isDesktopWidthValid()">
+      <h1 class="headline-1" id="premier">UCSD's premier vocal ensemble</h1>
+      <h3 class="subheadline-1" id="diverse">Diverse people, majors, & interests-united by a common passion for music.</h3>
+      <button pButton type="button" class="subheadline-1 btn btn-primary" id="join" routerLink="/auditions">
+        <p>Join us</p>
+      </button>
     </div>
     <div class="text-content flex-column" id="premier-container" *ngIf="!isDesktopWidthValid()">
-      <h1 class="headline-1" id="premier">UCSD's premier vocal ensemble</h1>
+      <h1 class="headline-1" id="premier">UCSD's premier vocal ensemble</h1> 
       <h3 class="subheadline-1" id="diverse">Diverse people, majors, & interests-united by a common passion for music.</h3>
       <button pButton type="button" class="subheadline-1 btn btn-primary" id="join" routerLink="/auditions">
         <p>Join us</p>
@@ -88,9 +86,12 @@
           <p class="album-year">{{ track.release_year }}</p>
         </div>
       </div>
-      <button pButton type="button" class="btn-transparent" id="discover">
+      <!-- <button pButton type="button" class="btn-transparent" id="discover">
         <a href="https://open.spotify.com/artist/1eohVzWa5vbk54pmWcFQar" target="_blank">Discover more</a>
-      </button>
+      </button> -->
+      <a href="https://open.spotify.com/artist/1eohVzWa5vbk54pmWcFQar" target="_blank" class="btn-transparent" id="discover">
+        Discover more
+      </a>
     </div>
   </section>
   <section class="transition flex-column desktop-width" id="transition-row">

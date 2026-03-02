@@ -27,11 +27,11 @@ header {
 .burger-menu {
   display: none; /* Hide by default */
   cursor: pointer;
-  width: 17.91px;
-  height: 12.21px;
+  /* width: 17.91px;
+  height: 12.21px; */
   margin-left: auto; /* Push the icon to the right */
   margin-right: 10px;
-
+  font-size: 2.5rem;
 }
 
 
@@ -59,17 +59,6 @@ header {
   color: #000; /* Adjust as necessary */
 }
 
-@media (max-width: 768px) {
-  .nav-desktop {
-    display: none; /* Hide desktop nav in tablet view */
-  }
-
-  .burger-menu {
-    display: block; /* Show burger menu icon in tablet view */
-  }
-}
-
-
 nav {
   display: flex;
   gap: 20px; /* Adjust as necessary to create space between links */
@@ -79,6 +68,36 @@ nav a {
   margin: 0 1rem;
   text-decoration: none;
   color: var(--text-color-dark);
+}
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none; /* Hide desktop nav in tablet view */
+  }
+
+  .burger-menu {
+    display: block; /* Show burger menu icon in tablet view */
+    float: none;
+  }
+
+  .nav-container {
+    width: 0%;
+    height: 0%;
+  }
+}
+
+@media (max-width: 1164px) {
+  .nav-desktop {
+    gap: 0rem;
+  }
+
+  .nav-desktop .body-text {
+    font-size: 20px;
+  }
+
+  .nav-container {
+    flex: 0 0 auto;
+  }
 }
 
 nav a:hover,.footer-nav:hover {
@@ -95,7 +114,8 @@ app-theme-toggle {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2rem 5rem 2rem 5rem;
+  gap: 1rem;
   background-color: var(--background-color-gray);
 }
 
@@ -111,7 +131,7 @@ app-theme-toggle {
 
 /* Right-aligning content in other columns */
 .footer-column:not(:first-child) {
-  text-align: right;
+  text-align: left;
   align-items: flex-end;
 }
 
@@ -121,14 +141,20 @@ app-theme-toggle {
 
 .social-icons {
   display: flex;
-  gap: 10px; /* Adjust the gap between the icons */
+  margin-top: 1rem;
+  gap: 1.5rem; /* Adjust the gap between the icons */
 }
 
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 3rem 2rem 3rem;
+  }
+}
 
 @media (max-width: 768px) {
-  .footer-column{
+  /* .footer-column{
     
-  }
+  } */
   .tablet{
     display:block;
   }
@@ -165,6 +191,12 @@ app-theme-toggle {
   .footer-column .subheadline-1, 
   .footer-column .body-text {
     font-size: 14px; /* Adjust the font size for mobile view */
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer-column:first-of-type {
+    margin-right: 20rem;
   }
 }
 
