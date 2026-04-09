@@ -1,4 +1,4 @@
-<div class="top-navigation" #topButtonGroup>
+<div class="top-navigation" [style.display]="showStickyNav ? 'flex' : 'none'" [style.top.px]="stickyHeaderOffset">
   <div class="button-group" >
     <button (click)="scrollToSection('sopranos')" class="nav-button sopranos"><p class="body-text">Sopranos</p></button>
     <button (click)="scrollToSection('mezzos')" class="nav-button mezzos"><p class="body-text">Mezzos</p></button>
@@ -81,12 +81,3 @@
     </div>
   </div>
 </div>
-
-
-  
-  
-  
-
-  
-
-  
