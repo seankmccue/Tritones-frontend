@@ -1,16 +1,15 @@
 .top-navigation {
   display: none;
   position: sticky;
-  top: 0;
+  top: 80px;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 900;
   width: 100%;
   height: auto;
   background-color: var(--background-color-dark);
   flex-direction: column;
   align-items: center;
-  /* transition: all 0.5s; */
 }
 
 
@@ -172,14 +171,6 @@
   width: 238px;
 }
 
-.button-group .nav-button.bass {
-  width: 238px;
-}
-
-.nav-break {
-  display: none;
-}
-
 @media (max-width: 768px) {
   .content-block {
     width: 100%;
@@ -252,14 +243,7 @@
 
   }
 
-  .nav-break {
-    display: block;
-    flex-basis: 100%;
-    height: 0;
-  }
-
   .button-group .nav-button {
-    height: 40px;
     margin: 0;
     border-radius: 12px;
   }
@@ -268,36 +252,12 @@
     font-size: 14.83px;
   }
 
-  .button-group .nav-button.sopranos {
-    width: 110px;
-  }
-
-  .button-group .nav-button.mezzos {
-    width: 100px;
-  }
-
-  .button-group .nav-button.altos {
-    width: 83px;
-  }
-
-  .button-group .nav-button.tenors {
-    width: 110px;
-  }
-
-  .button-group .nav-button.baritones {
-    width: 138px;
-  }
 }
 
 .display-member {
   margin-top: 5%;
 }
 
-
-.voice-part {
-  /* margin-top: 10px; */
-  /* margin-bottom: 20px; */
-}
 
 .voice-part-title {
   font-size: 32px;
@@ -348,76 +308,56 @@
       rgb(0, 0, 0) 96.42%);
 }
 
-.flexcontainer {
+.flexcontainer,
+.selectedFlexContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 4px;
   position: absolute;
+}
+
+.flexcontainer {
+  align-items: center;
   width: 195px;
   height: 74px;
   bottom: 15px;
   left: 65px;
 }
 
-
-.text-1 {
-  color: var(--text-color-dark);
-  text-align: center;
-  font-family: Syne;
-  font-size: 17.97px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.text-2 {
-  color: var(--text-color-dark);
-  text-align: center;
-  font-family: Syne;
-  font-size: 17.97px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.text-3 {
-  color: var(--text-color-dark);
-  text-align: left;
-  font-family: Syne;
-  font-size: 17.97px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-
+.text-1,
+.text-2,
+.text-3,
 .text-4 {
   color: var(--text-color-dark);
-  text-align: left;
   font-family: Syne;
   font-size: 17.97px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
 }
 
+.text-1,
+.text-2 {
+  text-align: center;
+}
+
+.text-3,
+.text-4 {
+  text-align: left;
+}
+
+.text-1,
+.text-3 {
+  font-weight: 700;
+}
+
+.text-2,
+.text-4 {
+  font-weight: 400;
+}
 
 .selectedFlexContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 4px;
-  position: absolute;
-  /* width: 195px;
-    height: 74px; */
+  align-items: flex-start;
   bottom: 25px;
   left: 15px;
   margin-bottom: 1%;
 }
-
-/* .content-block {
-    position: sticky;
-    top: 80px;
-    width: 100%;
-    /* backdrop-filter: blur(10px); */
